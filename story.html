@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>গল্প লোড হচ্ছে...</title>
+    <meta name="description" content="বাংলা গল্পের আসরে একটি অসাধারণ গল্প পড়ুন।">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="reading-progress-bar"></div>
+    <div id="preloader"><div class="spinner"></div></div>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">গল্পের আসর</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">হোম</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">লেখকের কথা</a></li>
+            </ul>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <div class="hamburger" aria-label="Open menu">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="story-page-main">
+        <div id="story-content-container" class="story-container">
+            <!-- Story content will be dynamically inserted here by app.js -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© ২০২৪ গল্পের আসর। সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+    
+    <script type='text/javascript' src='//pl26830929.profitableratecpm.com/c8/fc/39/c8fc39fb82a72cd6331452b449c2f611.js'></script>
+    <script src="js/common.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        var disqus_config = function () {
+            // this.page.url and this.page.identifier will be set dynamically in app.js
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js'; // IMPORTANT: Replace
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments.</a></noscript>
+</body>
+</html>
