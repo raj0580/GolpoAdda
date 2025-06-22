@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - গল্পের আসর</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div id="login-screen">
+        <h1>Admin Login</h1>
+        <input type="password" id="admin-password" placeholder="Enter Password">
+        <button id="login-btn">Login</button>
+        <p id="login-error" class="error-msg"></p>
+    </div>
+
+    <div id="admin-panel" style="display: none;">
+        <header>
+            <h1>গল্পের আসর - এডমিন প্যানেল</h1>
+            <button id="export-json-btn">Export Data as JSON</button>
+        </header>
+        <main>
+            <div class="admin-section">
+                <h2>Add / Edit Story</h2>
+                <form id="story-form">
+                    <input type="hidden" id="story-id">
+                    <label for="story-title">Title (বাংলায়):</label>
+                    <input type="text" id="story-title-input" required>
+                    
+                    <label for="story-author">Author (বাংলায়):</label>
+                    <input type="text" id="story-author-input" required>
+
+                    <label for="story-thumbnail">Thumbnail URL:</label>
+                    <input type="text" id="story-thumbnail-input" placeholder="e.g., https://i.imgur.com/your-image.jpg" required>
+
+                    <label for="story-tags">Tags (comma separated, বাংলায়):</label>
+                    <input type="text" id="story-tags-input" placeholder="e.g., প্রেম,রহস্য" required>
+
+                    <label for="story-description">Short Description (বাংলায়):</label>
+                    <textarea id="story-description-input" rows="3" required></textarea>
+
+                    <h3>Chapters</h3>
+                    <div id="chapters-container">
+                        <!-- Chapter fields will be added here -->
+                    </div>
+                    <button type="button" id="add-chapter-btn">+ Add Chapter</button>
+
+                    <div class="form-actions">
+                        <button type="submit" id="save-story-btn">Save Story</button>
+                        <button type="button" id="clear-form-btn">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="admin-section">
+                <h2>Existing Stories</h2>
+                <div id="existing-stories-list">
+                    <!-- List of stories will be loaded here -->
+                </div>
+            </div>
+            
+            <div id="export-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">×</span>
+                    <h2>Exported JSON Data</h2>
+                    <p>Copy the text below and paste it into your `data/storyData.json` file.</p>
+                    <textarea id="json-output" readonly></textarea>
+                    <button id="copy-json-btn">Copy to Clipboard</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
